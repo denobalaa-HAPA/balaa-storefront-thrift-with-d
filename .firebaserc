@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "balaa-studios-control-system"
+  },
+  "targets": {
+    "balaa-studios-control-system": {
+      "hosting": {
+        "thrift-with-d": [
+          "thrift-with-d"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

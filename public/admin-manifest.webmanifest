@@ -1,0 +1,20 @@
+{
+  "name": "Thrift With D Admin",
+  "short_name": "TWD Admin",
+  "description": "Mobile catalog editor for Thrift With D.",
+  "start_url": "./admin.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./admin-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "productivity"]
+}

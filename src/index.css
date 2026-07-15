@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --color-primary-brand: #e0ff4f;
+  --color-primary-brand-dark: #c8eb2c;
+  --color-primary-brand-light: #f3ffd1;
+  --color-bg-dark: #0a0a0a;
+  --color-bg-glass: rgba(10, 10, 10, 0.7);
+  --color-text-light: #FAF6EE;
+  --color-text-muted: #A8A29E;
+  --color-accent-amber: #e0ff4f;
+}
+
+@import "leaflet/dist/leaflet.css";
+
+/* Leaflet layout overrides and fixes */
+.leaflet-container {
+  font-family: inherit;
+  background-color: #1c1917 !important;
+  border-color: #2e2a24 !important;
+}
+
+.leaflet-bar {
+  border: 2px solid #2e2a24 !important;
+  box-shadow: 4px 4px 0px 0px #1c1917 !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.leaflet-bar a {
+  background-color: #faf6ee !important;
+  color: #1c1917 !important;
+  border-bottom: 1px solid #e7dfd5 !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #ebdcb9 !important;
+  color: #1c1917 !important;
+}
+
+/* Glassmorphism custom classes */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(224, 255, 79, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+.glass-card {
+  background: rgba(250, 246, 238, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(250, 246, 238, 0.08);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1917;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e0ff4f;
+}
+
+@layer utilities {
+  @keyframes marquee-loop {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-reverse-loop {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee-loop 40s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-marquee-reverse {
+    display: flex;
+    width: max-content;
+    animation: marquee-reverse-loop 40s linear infinite;
+  }
+
+  .animate-marquee-reverse:hover {
+    animation-play-state: paused;
+  }
+}

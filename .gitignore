@@ -1,0 +1,15 @@
+﻿node_modules/
+dist/
+build/
+out/
+.next/
+*.mp4
+*.mp3
+*.zip
+*.tar.gz
+*.mov
+*.avi
+.firebase/
+firebase-debug.log
+.gradle/
+local.properties
